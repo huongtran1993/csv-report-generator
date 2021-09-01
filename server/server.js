@@ -27,3 +27,7 @@ app.post('/upload_json', upload.single('data-input'), function(req, res) {
     }
   });
 })
+app.get('/csv_report', function(req, res) {
+  var filePath = path.join(__dirname, '/../data/csv_report.csv');
+  res.sendFile(filePath);
+})
