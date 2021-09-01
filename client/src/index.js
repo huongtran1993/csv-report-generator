@@ -15,9 +15,12 @@ $(document).ready(function() {
     e.preventDefault();
     var text = $('#data-input').val();
     submitHandler(text, function() {
-      $('#data-input').val('')
-      console.log('POST is successful');
+      $('#data-input').val('');
       $('body').append('<a href="/csv_report" download>Click HERE to download report</a>');
+      $('a').on('click', function(e) {
+        $('a').remove();
+      })
     })
   });
+
 });

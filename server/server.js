@@ -27,7 +27,6 @@ app.post('/upload_json', function(req, res) {
   });
 })
 app.get('/csv_report', function(req, res) {
-  console.log('HELLO from get request');
   var filePath = path.join(__dirname, '/../data/csv_report.csv');
   res.download(filePath, function(err) {
     if (err) {
