@@ -6,13 +6,15 @@
     <title>CSV Report Generator</title>
   </head>
   <body>
+    <script src="./jquery/dist/jquery.js"></script>
     <script src="./src/index.js"></script>
     <form action='/upload_json' method="POST" enctype="multipart/form-data">
       <div>
         <label for="data-input">JSON Data Input</label>
       </div>
       <div class="container">
-        <input type="file" id="data-input" name="data-input" accept=".json">
+        <!-- <input type="file" id="data-input" name="data-input" accept=".json"> -->
+        <textarea id="data-input" name="data-input" required></textarea>
         <button type="submit" id="submit-btn">Submit</button>
       </div>
     </form>
